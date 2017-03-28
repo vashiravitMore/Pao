@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>triangle</title>
+	<script src="../../../javascripts/fabric.js" ></script>
+	<script src="https://cdn.socket.io/socket.io-1.3.3.js"></script>
+	<style type="text/css">
+	 	canvas{border: 1px solid red; }
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="600" height="600"></canvas>
+</body>
+<script type="text/javascript">
+	var trigger = "1";
+	var triangle, triangle2;
+				 
+  var canvas = this.__canvas = new fabric.Canvas('canvas', { 
+ 		hoverCursor: 'pointer',selection: false});     
+	fabric.Object.prototype.transparentCorners = false;
+ 	triangle = new fabric.Triangle({
+					  width: 100, height: 100, left: 50, top: 300, fill: '#cca'
+					});
+ 	canvas.add(triangle);
+
+ 	triangle.set({left: 50, top: 50});
+					  //.emit("moveLineServer", pointer);
+
+
+</script>
+</html>
